@@ -1,0 +1,5 @@
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540780 is handled. Duration 426 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540781 is handled. Duration 426 ms by bot id=7060256762
