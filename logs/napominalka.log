@@ -3,3 +3,2162 @@ INFO:aiogram.dispatcher:Start polling
 INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
 INFO:aiogram.event:Update id=121540780 is handled. Duration 426 ms by bot id=7060256762
 INFO:aiogram.event:Update id=121540781 is handled. Duration 426 ms by bot id=7060256762
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540782 is not handled. Duration 1 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540782 by bot id=7060256762
+ValidationError: 4 validation errors for SendMessage
+reply_markup.InlineKeyboardMarkup
+  Input should be a valid dictionary or instance of InlineKeyboardMarkup [type=model_type, input_value=[[KeyboardButton(text='С...ne, request_user=None)]], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+reply_markup.ReplyKeyboardMarkup
+  Input should be a valid dictionary or instance of ReplyKeyboardMarkup [type=model_type, input_value=[[KeyboardButton(text='С...ne, request_user=None)]], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+reply_markup.ReplyKeyboardRemove
+  Input should be a valid dictionary or instance of ReplyKeyboardRemove [type=model_type, input_value=[[KeyboardButton(text='С...ne, request_user=None)]], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+reply_markup.ForceReply
+  Input should be a valid dictionary or instance of ForceReply [type=model_type, input_value=[[KeyboardButton(text='С...ne, request_user=None)]], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 21, in start
+    await message.answer("Здравствуйте", reply_markup=kb)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/types/message.py", line 2027, in answer
+    return SendMessage(
+           ^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 4 validation errors for SendMessage
+reply_markup.InlineKeyboardMarkup
+  Input should be a valid dictionary or instance of InlineKeyboardMarkup [type=model_type, input_value=[[KeyboardButton(text='С...ne, request_user=None)]], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+reply_markup.ReplyKeyboardMarkup
+  Input should be a valid dictionary or instance of ReplyKeyboardMarkup [type=model_type, input_value=[[KeyboardButton(text='С...ne, request_user=None)]], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+reply_markup.ReplyKeyboardRemove
+  Input should be a valid dictionary or instance of ReplyKeyboardRemove [type=model_type, input_value=[[KeyboardButton(text='С...ne, request_user=None)]], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+reply_markup.ForceReply
+  Input should be a valid dictionary or instance of ForceReply [type=model_type, input_value=[[KeyboardButton(text='С...ne, request_user=None)]], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540783 is not handled. Duration 0 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540783 by bot id=7060256762
+ValidationError: 1 validation error for ReplyKeyboardMarkup
+keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 21, in start
+    keyb = ReplyKeyboardMarkup()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ReplyKeyboardMarkup
+keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540784 is not handled. Duration 0 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540784 by bot id=7060256762
+ValidationError: 1 validation error for ReplyKeyboardMarkup
+keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 19, in start
+    keyb = ReplyKeyboardMarkup()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ReplyKeyboardMarkup
+keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+INFO:aiogram.event:Update id=121540785 is not handled. Duration 1 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540785 by bot id=7060256762
+ValidationError: 1 validation error for ReplyKeyboardMarkup
+keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 19, in start
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ReplyKeyboardMarkup
+keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540786 is not handled. Duration 0 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540786 by bot id=7060256762
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 17, in start
+    make = InlineKeyboardButton('Создать напоминалку', callback_data='make')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+INFO:aiogram.event:Update id=121540787 is not handled. Duration 0 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540787 by bot id=7060256762
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 17, in start
+    make = InlineKeyboardButton('Создать напоминалку', callback_data='make')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540788 is not handled. Duration 0 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540788 by bot id=7060256762
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 20, in start
+    kb = InlineKeyboardMarkup()
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540789 is not handled. Duration 0 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540789 by bot id=7060256762
+ValidationError: 1 validation error for InlineKeyboardButton
+text
+  Field required [type=missing, input_value={'callback_data': 'make'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 17, in start
+    make = InlineKeyboardButton(callback_data='make')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardButton
+text
+  Field required [type=missing, input_value={'callback_data': 'make'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+INFO:aiogram.event:Update id=121540790 is not handled. Duration 0 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540790 by bot id=7060256762
+ValidationError: 1 validation error for InlineKeyboardButton
+text
+  Field required [type=missing, input_value={'callback_data': 'make'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 17, in start
+    make = InlineKeyboardButton(callback_data='make')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardButton
+text
+  Field required [type=missing, input_value={'callback_data': 'make'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540791 is not handled. Duration 0 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540791 by bot id=7060256762
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 20, in start
+    kb = InlineKeyboardMarkup().add(make)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540792 is not handled. Duration 0 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540792 by bot id=7060256762
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 20, in start
+    kb = InlineKeyboardMarkup().add(make)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+INFO:aiogram.event:Update id=121540793 is not handled. Duration 0 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540793 by bot id=7060256762
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 20, in start
+    kb = InlineKeyboardMarkup().add(make)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.7/v/missing
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540794 is not handled. Duration 0 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540794 by bot id=7060256762
+ValidationError: 20 validation errors for InlineKeyboardMarkup
+inline_keyboard.0.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='text', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='Создать напоминалку', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.1.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='url', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.1.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.2.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='callback_data', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.2.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='make', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.3.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='web_app', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.3.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.4.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='login_url', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.4.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.5.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='switch_inline_query', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.5.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.6.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='switch_inline_query_current_chat', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.6.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.7.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='switch_inline_query_chosen_chat', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.7.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.8.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='callback_game', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.8.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.9.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='pay', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.9.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 20, in start
+    kb = InlineKeyboardMarkup(inline_keyboard=make).add(make)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 20 validation errors for InlineKeyboardMarkup
+inline_keyboard.0.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='text', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='Создать напоминалку', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.1.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='url', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.1.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.2.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='callback_data', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.2.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='make', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.3.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='web_app', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.3.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.4.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='login_url', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.4.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.5.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='switch_inline_query', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.5.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.6.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='switch_inline_query_current_chat', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.6.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.7.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='switch_inline_query_chosen_chat', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.7.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.8.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='callback_game', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.8.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.9.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='pay', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.9.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540795 is not handled. Duration 1 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540795 by bot id=7060256762
+ValidationError: 20 validation errors for InlineKeyboardMarkup
+inline_keyboard.0.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='text', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='Создать напоминалку', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.1.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='url', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.1.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.2.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='callback_data', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.2.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='make', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.3.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='web_app', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.3.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.4.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='login_url', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.4.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.5.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='switch_inline_query', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.5.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.6.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='switch_inline_query_current_chat', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.6.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.7.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='switch_inline_query_chosen_chat', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.7.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.8.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='callback_game', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.8.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.9.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='pay', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.9.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 20, in start
+    kb = InlineKeyboardMarkup(inline_keyboard=make)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 20 validation errors for InlineKeyboardMarkup
+inline_keyboard.0.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='text', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='Создать напоминалку', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.1.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='url', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.1.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.2.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='callback_data', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.2.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='make', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.3.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='web_app', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.3.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.4.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='login_url', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.4.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.5.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='switch_inline_query', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.5.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.6.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='switch_inline_query_current_chat', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.6.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.7.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='switch_inline_query_chosen_chat', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.7.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.8.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='callback_game', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.8.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.9.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value='pay', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.9.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540796 is not handled. Duration 0 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540796 by bot id=7060256762
+ValidationError: 10 validation errors for InlineKeyboardMarkup
+inline_keyboard.0.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('text', 'Создать напоминалку'), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('url', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.2
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('callback_data', 'make'), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.3
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('web_app', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.4
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('login_url', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.5
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('switch_inline_query', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.6
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('switch_inline_query_current_chat', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.7
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('switch_inline_query_chosen_chat', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.8
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('callback_game', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.9
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('pay', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 20, in start
+    kb = InlineKeyboardMarkup(inline_keyboard=make)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 10 validation errors for InlineKeyboardMarkup
+inline_keyboard.0.0
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('text', 'Создать напоминалку'), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.1
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('url', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.2
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('callback_data', 'make'), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.3
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('web_app', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.4
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('login_url', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.5
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('switch_inline_query', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.6
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('switch_inline_query_current_chat', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.7
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('switch_inline_query_chosen_chat', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.8
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('callback_game', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+inline_keyboard.0.9
+  Input should be a valid dictionary or instance of InlineKeyboardButton [type=model_type, input_value=('pay', None), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.7/v/model_type
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540797 is not handled. Duration 0 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540797 by bot id=7060256762
+AttributeError: 'InlineKeyboardMarkup' object has no attribute 'as_markup'
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 21, in start
+    await message.answer("Здравствуйте", reply_markup=kb.as_markup())
+                                                      ^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 811, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'InlineKeyboardMarkup' object has no attribute 'as_markup'
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540798 is handled. Duration 557 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540799 is handled. Duration 203 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540800 is handled. Duration 104 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540801 is handled. Duration 120 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540802 is handled. Duration 284 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540803 is not handled. Duration 0 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540803 by bot id=7060256762
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Input should be a valid list [type=list_type, input_value=<function start at 0x76d93567a200>, input_type=function]
+    For further information visit https://errors.pydantic.dev/2.7/v/list_type
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 19, in start
+    await message.answer("Здравствуйте", reply_markup=InlineKeyboardMarkup(inline_keyboard=start))
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Input should be a valid list [type=list_type, input_value=<function start at 0x76d93567a200>, input_type=function]
+    For further information visit https://errors.pydantic.dev/2.7/v/list_type
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540804 is not handled. Duration 1 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540804 by bot id=7060256762
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Input should be a valid list [type=list_type, input_value=<function start at 0x7d611a596200>, input_type=function]
+    For further information visit https://errors.pydantic.dev/2.7/v/list_type
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 19, in start
+    kb = InlineKeyboardMarkup(inline_keyboard=start)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Input should be a valid list [type=list_type, input_value=<function start at 0x7d611a596200>, input_type=function]
+    For further information visit https://errors.pydantic.dev/2.7/v/list_type
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540805 is not handled. Duration 0 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540805 by bot id=7060256762
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Input should be a valid list [type=list_type, input_value=<function start at 0x74e2eb152200>, input_type=function]
+    For further information visit https://errors.pydantic.dev/2.7/v/list_type
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 19, in start
+    kb = InlineKeyboardMarkup(inline_keyboard=start)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Input should be a valid list [type=list_type, input_value=<function start at 0x74e2eb152200>, input_type=function]
+    For further information visit https://errors.pydantic.dev/2.7/v/list_type
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540806 is not handled. Duration 1 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540806 by bot id=7060256762
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Input should be a valid list [type=list_type, input_value=<function start at 0x7f512db462a0>, input_type=function]
+    For further information visit https://errors.pydantic.dev/2.7/v/list_type
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 19, in start
+    kb = InlineKeyboardMarkup(inline_keyboard=start)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Input should be a valid list [type=list_type, input_value=<function start at 0x7f512db462a0>, input_type=function]
+    For further information visit https://errors.pydantic.dev/2.7/v/list_type
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540807 is not handled. Duration 0 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540807 by bot id=7060256762
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Input should be a valid list [type=list_type, input_value=<function start at 0x7a72799ba480>, input_type=function]
+    For further information visit https://errors.pydantic.dev/2.7/v/list_type
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 20, in start
+    kb = InlineKeyboardMarkup(inline_keyboard=start)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/pydantic/main.py", line 176, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Input should be a valid list [type=list_type, input_value=<function start at 0x7a72799ba480>, input_type=function]
+    For further information visit https://errors.pydantic.dev/2.7/v/list_type
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540808 is handled. Duration 419 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540809 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540810 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540811 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540812 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540813 is not handled. Duration 1 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540814 is not handled. Duration 0 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540815 is handled. Duration 431 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540816 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540817 is not handled. Duration 3 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540818 is not handled. Duration 1 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540819 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540820 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540821 is not handled. Duration 1 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540822 is not handled. Duration 1 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540823 is not handled. Duration 1 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540824 is not handled. Duration 1 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540825 is not handled. Duration 1 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540826 is not handled. Duration 1 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540827 is not handled. Duration 1 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540828 is not handled. Duration 2 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540829 is not handled. Duration 1 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540830 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540831 is not handled. Duration 3 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540832 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540833 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540834 is not handled. Duration 1 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540835 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540836 is not handled. Duration 1 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540837 is handled. Duration 315 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540838 is not handled. Duration 515 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540838 by bot id=7060256762
+ValueError: time data 'Здравствуйте Здравствуйте' does not match format '%d-%m-%Y %H:%M'
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 30, in start_callback
+    dt = datetime.datetime.strptime(f'{date} {time}', '%d-%m-%Y %H:%M')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/_strptime.py", line 554, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/_strptime.py", line 333, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Здравствуйте Здравствуйте' does not match format '%d-%m-%Y %H:%M'
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540839 is handled. Duration 304 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540840 is not handled. Duration 113 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540840 by bot id=7060256762
+ValueError: time data 'Здравствуйте' does not match format '%d-%m-%Y %H:%M'
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 27, in start_callback
+    dt = datetime.datetime.strptime(callback.message.text, '%d-%m-%Y %H:%M')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/_strptime.py", line 554, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/_strptime.py", line 333, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Здравствуйте' does not match format '%d-%m-%Y %H:%M'
+INFO:aiogram.event:Update id=121540841 is not handled. Duration 0 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540842 is handled. Duration 436 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540843 is handled. Duration 2 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540844 is handled. Duration 0 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540845 is handled. Duration 427 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540846 is handled. Duration 3 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540847 is handled. Duration 305 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540848 is not handled. Duration 0 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540848 by bot id=7060256762
+TypeError: request_datetime() missing 1 required positional argument: 'message'
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 26, in start_callback
+    request_datetime()
+TypeError: request_datetime() missing 1 required positional argument: 'message'
+INFO:aiogram.event:Update id=121540849 is not handled. Duration 1 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540849 by bot id=7060256762
+TypeError: request_datetime() missing 1 required positional argument: 'message'
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 26, in start_callback
+    request_datetime()
+TypeError: request_datetime() missing 1 required positional argument: 'message'
+INFO:aiogram.event:Update id=121540850 is not handled. Duration 0 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540850 by bot id=7060256762
+TypeError: request_datetime() missing 1 required positional argument: 'message'
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 26, in start_callback
+    request_datetime()
+TypeError: request_datetime() missing 1 required positional argument: 'message'
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540851 is handled. Duration 417 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540852 is not handled. Duration 174 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540852 by bot id=7060256762
+ValueError: time data 'Здравствуйте' does not match format '%d-%m-%Y %H:%M'
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 27, in start_callback
+    dt = datetime.datetime.strptime(callback.message.text, '%d-%m-%Y %H:%M')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/_strptime.py", line 554, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/_strptime.py", line 333, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'Здравствуйте' does not match format '%d-%m-%Y %H:%M'
+INFO:aiogram.event:Update id=121540853 is not handled. Duration 0 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540854 is handled. Duration 301 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540855 is handled. Duration 234 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540856 is not handled. Duration 2 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540857 is handled. Duration 425 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540858 is handled. Duration 221 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540859 is handled. Duration 203 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540860 is not handled. Duration 1 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540861 is handled. Duration 587 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540862 is handled. Duration 136 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540863 is handled. Duration 98 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540864 is handled. Duration 109 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540865 is not handled. Duration 1 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540866 is not handled. Duration 4 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540867 is not handled. Duration 2 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540868 is handled. Duration 529 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540869 is handled. Duration 335 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540870 is handled. Duration 200 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540871 is handled. Duration 105 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540872 is handled. Duration 536 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540873 is handled. Duration 192 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540874 is handled. Duration 111 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540875 is handled. Duration 291 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540876 is handled. Duration 315 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540877 is handled. Duration 126 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540878 is handled. Duration 93 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540879 is handled. Duration 114 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540880 is not handled. Duration 2 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540880 by bot id=7060256762
+TypeError: Message.edit_text() missing 1 required positional argument: 'text'
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 45, in hours_callback
+    await callback.message.edit_text()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Message.edit_text() missing 1 required positional argument: 'text'
+INFO:aiogram.event:Update id=121540881 is not handled. Duration 2 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540881 by bot id=7060256762
+TypeError: Message.edit_text() missing 1 required positional argument: 'text'
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 45, in hours_callback
+    await callback.message.edit_text()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Message.edit_text() missing 1 required positional argument: 'text'
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540882 is handled. Duration 331 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540883 is handled. Duration 158 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540884 is handled. Duration 97 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540885 is handled. Duration 306 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540886 is handled. Duration 104 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540887 is handled. Duration 506 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540888 is handled. Duration 207 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540889 is handled. Duration 105 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540890 is handled. Duration 204 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540891 is handled. Duration 403 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540892 is handled. Duration 145 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540893 is handled. Duration 112 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540894 is handled. Duration 204 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540895 is handled. Duration 308 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540896 is not handled. Duration 2 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540897 is not handled. Duration 1 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540898 is not handled. Duration 2 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540899 is not handled. Duration 2 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540900 is not handled. Duration 3 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540901 is handled. Duration 529 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540902 is handled. Duration 235 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540903 is handled. Duration 204 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540904 is handled. Duration 512 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540905 is handled. Duration 163 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540906 is handled. Duration 248 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540907 is handled. Duration 174 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540908 is handled. Duration 137 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540909 is handled. Duration 308 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540910 is handled. Duration 149 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540911 is handled. Duration 203 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540912 is handled. Duration 133 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540913 is handled. Duration 305 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
