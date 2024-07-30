@@ -2162,3 +2162,235 @@ INFO:aiogram.event:Update id=121540913 is handled. Duration 305 ms by bot id=706
 WARNING:aiogram.dispatcher:Received SIGINT signal
 INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
 INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540914 is handled. Duration 805 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540915 is handled. Duration 433 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540917 is not handled. Duration 774 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540917 by bot id=7060256762
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 27, in start_callback
+    await callback.message.edit_text('Выберите год', reply_markup=kb)
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/client/bot.py", line 482, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+INFO:aiogram.event:Update id=121540918 is not handled. Duration 780 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540918 by bot id=7060256762
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 27, in start_callback
+    await callback.message.edit_text('Выберите год', reply_markup=kb)
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/client/bot.py", line 482, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+INFO:aiogram.event:Update id=121540916 is not handled. Duration 783 ms by bot id=7060256762
+ERROR:aiogram.event:Cause exception while process update id=121540916 by bot id=7060256762
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/src/main.py", line 27, in start_callback
+    await callback.message.edit_text('Выберите год', reply_markup=kb)
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/client/bot.py", line 482, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/wewq/all_proj/napominalka/lib/python3.12/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+INFO:aiogram.event:Update id=121540919 is handled. Duration 613 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540920 is handled. Duration 614 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540921 is handled. Duration 203 ms by bot id=7060256762
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540922 is handled. Duration 627 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540923 is handled. Duration 224 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540924 is handled. Duration 214 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540925 is handled. Duration 409 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540926 is handled. Duration 205 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.event:Update id=121540927 is handled. Duration 630 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540928 is handled. Duration 255 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540929 is handled. Duration 204 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540930 is handled. Duration 203 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540931 is handled. Duration 612 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540932 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540933 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540934 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540935 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540936 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540937 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540938 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540939 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540940 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540941 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540942 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540943 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540944 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540945 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540946 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540947 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540948 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540949 is not handled. Duration 0 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540950 is handled. Duration 465 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540951 is handled. Duration 179 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540952 is handled. Duration 204 ms by bot id=7060256762
+INFO:aiogram.event:Update id=121540953 is handled. Duration 202 ms by bot id=7060256762
+WARNING:aiogram.dispatcher:Received SIGINT signal
+INFO:aiogram.dispatcher:Polling stopped for bot @napominalka123bot id=7060256762 - 'napominalka'
+INFO:aiogram.dispatcher:Polling stopped

@@ -41,7 +41,8 @@ async def days_callback(callback: CallbackQuery):
 
 @dp.callback_query(F.data == 'hours')
 async def hours_callback(callback: CallbackQuery):
-    await callback.message.edit_text('asd')
+    await callback.message.delete()
+    await callback.message.answer('Введите текст напоминания.')
 
 
 async def main():
